@@ -1,0 +1,128 @@
+.drawer {
+  position: absolute;
+  width: 420px;
+  right: 0;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 30px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.cartItem {
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  .cartSneakers {
+    margin-right: 15px;
+  }
+
+  .cartItemImg {
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+
+  .removeBtn {
+    opacity: 0.5;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  b {
+    font-size: 14px;
+  }
+
+  .cartInfo {
+    margin-right: 20px;
+  }
+}
+
+.items {
+  flex: 1;
+}
+
+.finalCart {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.cartTotalBlock {
+  ul {
+    margin-bottom: 30px;
+    padding: 0;
+
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #dfdfdf;
+      position: relative;
+      top: -4px;
+      margin: 0 7px;
+    }
+  }
+
+  .greenButton {
+    width: 100%;
+    height: 55px;
+    background: #9dd558;
+    border-radius: 18px;
+    border: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    img {
+      position: absolute;
+      right: 35px;
+      top: 20px;
+      transition: 0.15s;
+    }
+
+    &:hover {
+      background: #bae288;
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    &:active {
+      background: #7aaa3f;
+    }
+  }
+}

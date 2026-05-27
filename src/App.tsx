@@ -1,134 +1,59 @@
+import Card from "./components/Card";
+import Header from "./components/Header";
+import Drawer from "./components/Drawer";
 import "./App.css";
+
+const arr = [
+  {
+    name: "Мужские Кроссовки Nike Blazer Mid Suede",
+    price: 12999,
+    imageUrl: "/img/sneakers/1.svg",
+  },
+  {
+    name: "Мужские Кроссовки Nike Air Max 270",
+    price: 15600,
+    imageUrl: "/img/sneakers/2.svg",
+  },
+  {
+    name: "Мужские Кроссовки Nike Blazer Mid Suede",
+    price: 8499,
+    imageUrl: "/img/sneakers/3.svg",
+  },
+  {
+    name: "Кроссовки Puma X Aka Boku Future Rider",
+    price: 8999,
+    imageUrl: "/img/sneakers/4.svg",
+  },
+  {
+    name: "Мужские Кроссовки Under Armour Curry 8",
+    price: 15199,
+    imageUrl: "/img/sneakers/5.svg",
+  },
+];
 
 function App() {
   return (
     <>
       <div className="wrapper">
-        <header>
-          <div className="headerLeft">
-            <img width={40} height={40} src="/img/logo.png" />
-            <div className="headerInfo">
-              <h3>React Sneakers</h3>
-              <p>Магазин лучших кроссовок</p>
+        <Drawer />
+        <Header />
+        <div className="content">
+          <div className="contentInfo">
+            <h1>Все кроссовки</h1>
+            <div className="searchBlock">
+              <img src="/img/search.svg" alt="Search" />
+              <input placeholder="Поиск..." />
             </div>
           </div>
-          <ul className="headerRight">
-            <li>
-              <img width={18} height={18} src="/img/cart.svg" />
-              <span>1205 руб.</span>
-            </li>
-            <li>
-              <img width={18} height={18} src="/img/profile.svg" />
-            </li>
-          </ul>
-        </header>
-        <div className="content">
-          <h1>Все кроссовки</h1>
           <div className="sneakers">
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/1.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/2.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/3.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/4.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/5.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/6.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/7.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img width={133} height={112} src="/img/sneakers/8.svg" alt="" />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="cardButtom">
-                <div className="cardSpan">
-                  <span>Цена:</span>
-                  <b>12 999 руб.</b>
-                </div>
-                <button className="button">
-                  <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
-                </button>
-              </div>
-            </div>
+            {arr.map((obj) => (
+              <Card
+                title={obj.name}
+                price={obj.price}
+                imageUrl={obj.imageUrl}
+                onClick={() => console.log(obj)}
+              />
+            ))}
           </div>
         </div>
       </div>

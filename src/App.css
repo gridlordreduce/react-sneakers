@@ -16,6 +16,10 @@ body {
   background-color: #e7f6ff;
 }
 
+* {
+  font-family: "Inter", system-ui;
+}
+
 .wrapper {
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
@@ -65,11 +69,13 @@ header {
 
 .content {
   padding: 40px;
+}
 
-  h1 {
-    margin: 0 auto;
-    padding-bottom: 40px;
-  }
+.contentInfo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  justify-content: space-between;
 }
 
 .sneakers {
@@ -78,42 +84,29 @@ header {
   justify-content: space-around;
 }
 
-.card {
+.searchBlock {
   border: 1px solid #f3f3f3;
-  padding: 30px;
-  width: 150px;
-  border-radius: 40px;
-  margin-bottom: 30px;
+  display: flex;
+  border-radius: 10px;
+  padding: 0 15px;
 
-  span {
-    opacity: 0.5;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-
-  h5 {
-    font-weight: 400;
-    font-size: 14px;
-  }
-
-  .cardButtom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .cardSpan {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .button {
-    background-color: #ffffff;
-    border: 1px solid #f2f2f2;
-    box-sizing: border-box;
-    border-radius: 8px;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
+  input {
+    border: 0;
+    padding: 13px;
+    width: 200px;
+    font-size: 16px;
   }
 }
+
+
+
+.overlay {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
