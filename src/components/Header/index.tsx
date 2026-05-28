@@ -1,6 +1,8 @@
 import styles from "./Header.module.scss";
 
-function Header() {
+interface headerProps {onClickCart: () => void}
+
+function Header(props: headerProps) {
     return(
         <>
         <header>
@@ -12,7 +14,7 @@ function Header() {
             </div>
           </div>
           <ul className={styles.headerRight}>
-            <li>
+            <li onClick={props.onClickCart} className={styles.cart}>
               <img width={18} height={18} src="/img/cart.svg" />
               <span>1205 руб.</span>
             </li>
