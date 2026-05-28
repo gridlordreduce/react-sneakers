@@ -5,6 +5,7 @@ import React from "react";
 import "./App.css";
 
 interface CartItem {
+  id: number | string;
   name: string;
   price: number;
   imageUrl: string;
@@ -26,14 +27,24 @@ function App() {
   }, []);
 
   const onAddToCart = (obj: CartItem) => {
-    setCartItems(prev => [...prev, obj]);
+    setCartItems((prev) => [...prev, { ...obj, id: Date.now() }]);
   };
+
+  const removeFromCart = (id: number | string) => {
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const onClosed = () => setCartOpened(false);
 
   return (
     <>
       <div className="wrapper">
         {cartOpened && (
-          <Drawer items={cartItems} onClose={() => setCartOpened(false)} />
+          <Drawer
+            items={cartItems}
+            onClose={onClosed}
+            onRemove={removeFromCart}
+          />
         )}
         <Header onClickCart={() => setCartOpened(true)} />
         <div className="content">
@@ -47,6 +58,7 @@ function App() {
           <div className="sneakers">
             {items.map((obj) => (
               <Card
+                id={obj.id}
                 name={obj.name}
                 price={obj.price}
                 imageUrl={obj.imageUrl}
